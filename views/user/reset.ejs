@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') -%>
+
+
+
+<form >
+    <div>
+       
+    </div>
+    <div>
+        
+    </div>
+    <div>
+        <input type="submit" >
+    </div>
+</form action="/reset/<%= token %>?_method=PUT" method="POST">
+<section id="add" class="container">
+        <div class="form-wrap">
+            <h1>Reset Password</h1>
+          <form>
+            <div class="input-group">
+                    <label for="password">New Password</label>
+                    <input type="password" name="password" id="password"class="input-box" placeholder="New password" autofocus>
+            </div>
+            <div class="input-group">
+                    <label for="confirm">Confirm Password</label>
+                    <input type="password" name="confirm" id="confirm" class="input-box"  placeholder="Confirm password">
+            </div>
+            <input type="submit" value="Update Password" class="btn btn-reverse">
+          </form>
+        </div>
+      </section>
+      <div style="margin-top: 100px;"></div>
+      <% include ../partials/footer -%>

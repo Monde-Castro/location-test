@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') -%>
+
+</form action="/forgot-password?_method=PUT" method="POST">
+<section id="add" class="container">
+        <div class="form-wrap">
+          <h1>Forgot Password</h1>
+          <form>
+            <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email"  class="input-box" name="email" autofocus>
+                    <i class="fa fa-envelope-o fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+            <input type="submit" value="Reset Password" class="btn btn-reverse">
+          </form>
+        </div>
+      </section>
+      <div style="margin-top: 100px;"></div>
+      <% include ../partials/footer -%>

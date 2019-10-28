@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') -%>
+
+
+<section id="add" class="container">
+        <div class="form-wrap">
+          <h1>Login</h1>
+          <form action="/login" method="POST">
+              <div class="input-group">
+                    <lable for="username">Username:</lable>
+                    <input type="text"  id="username" class="input-box" name="username" placeholder="username" required value="">
+                    <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+                <div class="input-group">
+                        <lable for="password">Password:</lable>
+                        <input type="text"  id="password" id="password"  class="input-box" name="password" placeholder="password" required value="">
+                        <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                <p><a href="/forgot-password">Forgot password?</a></p>
+            <input type="submit" value="Submit" class="btn btn-reverse">
+          </form>
+        </div>
+        
+      </section>
+
+<% include ./partials/footer -%>

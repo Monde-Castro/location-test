@@ -1,0 +1,58 @@
+
+<form action="/posts" method="GET">
+    <div class="search-box">
+        <input type="text" name="search"  class="search-text" placeholder="Block G, L, H, etc..." value="<%= query.search %>">
+        <div class="search-btn">
+                <input type="submit" id="submit" name="submit" class="search-text input-Submit">
+                <label for="submit">
+                    <i  class="fas fa-search"></i>  
+
+                </label>
+        </div>
+    </div>
+    <section class="price--rating_section">
+            <div class="price-box">
+                    <h2>Price:</h2>
+                    <input type="number" class="Min-Max_input" id="min" name="price[min]" min="0" max="10000" step="1" placeholder="Min" value="<%= query.price ? query.price.min : '' %>">
+                
+                    <input type="number" id="max" class="Min-Max_input" name="price[max]" min="0" max="10000" step="1" placeholder="Max" value="<%= query.price ? query.price.max : '' %>">
+                    <div class="rating-container">
+                   
+                            <h2>Rate:</h2>
+                            <label for="zero-stars" class="checkbox-label">
+                                    <input type="checkbox" class="checkbox"  id="zero-stars" name="avgRating[]" value="0" <%= query.avgRating && query.avgRating.includes('0') ? 'checked' : '' %>>
+                                   <span class="checkbox-Text">0 stars</span>
+                            </label>
+                            <label for="one-star" class="checkbox-label">
+                                <input type="checkbox" id="one-star" class="checkbox" name="avgRating[]" value="1" <%= query.avgRating && query.avgRating.includes('1') ? 'checked' : '' %>>
+                                <span class="checkbox-Text">1 stars</span>
+                            </label>
+                            <label for="two-stars" class="checkbox-label">
+                                <input type="checkbox" id="two-stars" name="avgRating[]" value="2" <%= query.avgRating && query.avgRating.includes('2') ? 'checked' : '' %>>
+                                <span class="checkbox-Text">2 stars</span>
+                            </label>
+                            <label for="three-stars" class="checkbox-label">
+                                <input type="checkbox" id="three-stars" name="avgRating[]" value="3" <%= query.avgRating && query.avgRating.includes('3') ? 'checked' : '' %>>
+                                <span class="checkbox-Text">3 stars</span>
+                            </label>
+                            <label for="four-stars" class="checkbox-label">
+                                <input type="checkbox" id="four-stars" name="avgRating[]" value="4" <%= query.avgRating && query.avgRating.includes('4') ? 'checked' : '' %>>
+                                <span class="checkbox-Text">4 stars</span>
+                            </label>
+                            <label for="five-stars" class="checkbox-label">
+                                <input type="checkbox" id="five-stars" name="avgRating[]" value="5" <%= query.avgRating && query.avgRating.includes('5') ? 'checked' : '' %>>
+                                <span class="checkbox-Text">5 stars</span>
+                            </label>
+                        </div>
+                    
+                </div>
+    </section>
+
+
+
+<div>
+    <a href="/posts" class="btn-Delete">Clear all</a>
+</div>
+
+
+</form>

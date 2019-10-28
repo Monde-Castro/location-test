@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title  %></title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/starability-basic.min.css">
+<script src="/javascripts/materialize.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/lightbox.min.css">
+<script src="/javascripts/lightbox-plus-jquery.min.js"></script>
+</head>
+<body>
+    <% include ../partials/navbar %>
+    <% include ../partials/flash-message %>
+    <%- body -%>
+    <% include ../partials/footer %>
+    <script>
+            var post =  JSON.stringify(post) 
+    </script>
+    <script src="/javascripts/post-show.js"></script>
+    <script src="/javascripts/lightbox-plus-jquery.min.js"></script>
+
+</body>
+</html>

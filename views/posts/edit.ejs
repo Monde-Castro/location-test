@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') -%>
+
+<section id="add" class="container">
+        <div class="form-wrap">
+            <h1>Edit Post </h1>
+          <form action="/posts/<%= post.id %>?_method=PUT" method="POST" id="postEditform" enctype="multipart/form-data">
+            <div class="input-group">
+                    <input type="text" name="post[title]" class="input-box" placeholder="Title" value="<%= post.title %>">
+            </div>
+            <div class="input-group">
+                        <input type="text" name="post[price]" step=".01"  class="input-box"  placeholder="Price" value="<%= post.price %>">
+                </div>
+            <div class="input-group">
+                        <input type="text" name="post[PhoneNo]" step=".01"  class="input-box"  placeholder="PhoneNo" value="<%= post.PhoneNo %>">
+                </div>
+            <div class="input-group">
+                    
+                    <div class=" dropfileForm " >
+                            <div>
+                                <lable for="file" class="fileLabel">
+                                        <input type="file" id="file"  class="fileLabel" accept="images/*" name="file" multiple >
+                                    <span class="fileInfro">Upload images</span>     
+                                </lable>
+                            </div>
+                            <div class="gallery">
+                            <% post.images.forEach(function(image, i){ %>
+                                <a href="<%= image.url %>" data-lightbox="#mygallery"><img src="<%= image.url %>"  alt="location-image" ></a> 
+                                
+                                <label for="image<%= i %>" class="checkbox-label">
+                                        <input type="checkbox" class="checkbox" name="deleteImages[]" class="imageDeleteCheckbox" id="image<%= i %>" value="<%= image.public_id %>">
+                                        <span class="checkbox-Text">Delete?</span>
+                                </label>
+                                <% }); %>
+                        </div>
+            </div>
+            <div class="input-group">
+                <textarea  name="post[description]"class="input-box"  placeholder="Description" rows="10" ><%= post.description %></textarea>
+            </div>
+            <div class="input-group">
+                    <input type="text" name="post[location]" class="input-box" placeholder="Location" value="<%= post.location %>">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-reverse">
+          </form>
+        </div>
+      </section>
+<script src="/javascripts/post-edit.js"></script>
+<script src="/javascripts/lightbox-plus-jquery.min.js"></script>
+<% include ../partials/footer -%>

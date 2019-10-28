@@ -1,0 +1,28 @@
+<% layout('layouts/boilerplate') -%>
+
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Register</h1>
+      <form action="/register" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <lable for="username">Username:</lable>
+            <input type="text" class="input-box" id="username" name="username" placeholder="username" required value="<%= username %>">
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="input-group">
+            <lable for="password">Password:</lable>
+            <input type="text" class="input-box"  id="password" id="password" name="password" placeholder="password" required >
+            <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+        
+        <div class="input-group">
+            <lable for="email">Email:</lable>
+            <input type="text" class="input-box" id="email" name="email" placeholder="email" required value="<%= email %>">
+            <i class="fa fa-envelope-o fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+        
+        <input type="submit" value="Submit" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>
+<% include ./partials/footer -%>

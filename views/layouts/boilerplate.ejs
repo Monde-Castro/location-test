@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/javascripts/materialize.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/lightbox.min.css">
+  <script src="/javascripts/lightbox-plus-jquery.min.js"></script>
+  <script >
+      function openSildeMenu(){
+        document.getElementById('side-menu').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+      }
+      function closeSildeMenu(){
+        document.getElementById('side-menu').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+      }
+    </script>
+  </head>
+  <body>
+    <% include ../partials/navbar %>
+    <% include ../partials/flash-message %>
+    <div id="main">
+      <%- body -%>
+    </div>
+
+    
+    <% if(title === 'Posts index') { %>
+  <script src="/javascripts/post-index.js"></script>
+ 
+      <% } %>
+ </body>
+</html>
+    

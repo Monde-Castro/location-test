@@ -1,0 +1,74 @@
+<header class="inner" >
+        <div class="hamburger">
+          <a href="#" onclick="openSildeMenu()">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </a>
+        </div>
+        <div id="side-menu" class="side-nav">
+          <a href="#" class="btn-close" onclick="closeSildeMenu()">&times;</a>
+          <hr>
+          <a href="/">Home</a>
+          <li>
+              <a href="/posts">Accommdation</a>
+            </li>
+          <% if(!currentUser) {  %>
+            <li>
+              <a href="/register">Register</a>  
+           </li>
+           <li>
+            <a href="/login">Login</a>  
+         </li>
+          <% } else { %>
+            <li>
+              <a href="/profile">Profile</a>  
+           </li>
+           <li>
+            <a href="/logout">Logout</a>  
+         </li>
+           <div class="profile-image">
+
+             <img src="<%= currentUser.image.secure_url %>" class="profile-image--navbar" alt="<%= currentUser.username %>'s profile image" >
+             <br> 
+             <a href="/profile"><%= currentUser.username %>!</a> 
+           </div>
+        
+          <% }  %>       
+        </div>
+      <h2><a href="/"><i class="fas fa-map-marker-alt Logo"></i>Location</a></h2>
+      <nav>
+        <ul class="nav-links" >
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/posts">Accommdation</a>
+          </li>
+          <% if(!currentUser) {  %>
+            <li>
+              <a href="/register">Register</a>  
+           </li>
+           <li>
+            <a href="/login">Login</a>  
+         </li>
+          <% } else { %>
+            <li>
+              <a href="/profile">Profile</a>  
+           </li>
+           <li>
+            <a href="/logout">Logout</a>  
+         </li>
+           <div class="profile-image">
+
+             <img src="<%= currentUser.image.secure_url %>" class="profile-image--navbar" alt="<%= currentUser.username %>'s profile image" >
+             <br> 
+             <a href="/profile"><%= currentUser.username %>!</a> 
+           </div>
+        
+          <% }  %>
+          
+        </ul>
+      </nav>
+    </header>
+    <div id="navbar"></div>

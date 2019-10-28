@@ -1,0 +1,60 @@
+<% layout('layouts/boilerplate') -%>
+
+
+<div class="container">
+  <% include ../partials/searchfilter %>
+</div>
+
+
+<div class="container">
+  <% include ../partials/paginatePage %>
+</div>
+
+<% posts.docs.forEach(function(post){ %>
+   <section id="gigs" class="container">
+    <div class="gig" data-aos="fade-left">
+        <div class="view-contnet">
+            <div class="content">
+                
+                <% for(var i = 0; i > post.images.length; i++) { %>
+                  <% if(post.images[i].length > 1) { %>
+
+                                <div id="view-sub" class="view-imgs">
+                                        <div >
+                                                <a href="<%= post.images[i].url %>" data-lightbox="#mygallery"><img src="<%= post.images[i].url %>" alt="location-image" ></a>
+                                        </div>
+                                    </div>
+                    
+                                    <% }; %>
+                                    <% }; %>
+                                    
+            </div>
+              <div class="content-information">
+                <div style="display: flex;" >
+
+                  <h1 class="card-title"><%=  post.location %></h1>
+                <div style="display: flex; align-items: center; margin: 0 50px;
+                padding: 0 50px;">
+                    <h3 >Price:</h3> <span style="margin: 1.2rem"><%= post.price%></span></h3>
+                </div>   
+                  
+                </div>
+                
+                <p><h3>Description:</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem at ratione itaque, magnam reiciendis nihil commodi temporibus dolorum sapiente exercitationem animi quis provident, aperiam explicabo perspiciatis voluptatem culpa ipsam nostrum officia nesciunt nisi qui iure quasi sit? Laboriosam deserunt, eveniet nam tempora nobis neque ea, quo quod sed, nesciunt numquam.</p>
+                </div>
+        </div>
+       
+        <ul>
+          <li class="Pay-content">Pay at the Accommodation</li>
+          <li ><a href="/posts/<%= post.id %>"  class="btn btn-reverse">View Deal</a></li>
+          
+        </ul>
+    </section>
+    <% }); %>
+
+    
+<div class="container">
+    <% include ../partials/paginatePage %>
+</div>
+
+<% include ../partials/footer -%>

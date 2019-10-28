@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') -%>
+
+
+
+<section id="add" class="container">
+        <div class="form-wrap">
+                <h1>New Post </h1>
+          <form action="/posts" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                    <input type="text" name="post[title]" class="input-box" placeholder="Title">
+            </div>
+            <div class="input-group">
+                    <input type="text" name="post[price]" step=".01"  class="input-box"  placeholder="Price" value="R ">
+            </div>
+            <div class="input-group">
+                    <input type="text" name="post[PhoneNo]" step=".01"  class="input-box"  placeholder="PhoneNo">
+            </div>
+            <div class="input-group">
+                    <div class=" dropfileForm " >
+                            <div>
+                                <label for="image" class="fileLabel">
+                                <br>
+                                <input type="file" class="fileInput" accept="images/*" id="image" name="images" multiple >
+                                    <br>
+                                   <span class="fileInfro"> Choose files: must be 4</span>
+                                </label>
+                        </div>
+                </div>                
+                
+            <div class="input-group">
+                <textarea  name="post[description]" placeholder="Description"  class="input-box" rows="10"></textarea>
+            </div>
+            <div class="input-group">
+                    <input type="text" name="post[location]" class="input-box" placeholder="Location">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-reverse">
+          </form>
+        </div>
+      </section>
+<% include ../partials/footer -%>
