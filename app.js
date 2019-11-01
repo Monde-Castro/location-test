@@ -20,7 +20,7 @@ const reviewsRouter = require('./routes/reviews');
 
 const app = express();
 // connect to the database
-mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/Location', { 
+mongoose.connect(process.env.MONGODB_URI , { 
 
   useNewUrlParser: true,
   useCreateIndex: true,
