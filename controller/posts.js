@@ -1,6 +1,4 @@
 const Post = require('../models/post');
-const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
-const geocodingClient = mbxGeocoding({ accessToken: process.env.MAPBOX_TOKEN });
 const { cloudinary } = require('../cloudinary');
 
 module.exports = {

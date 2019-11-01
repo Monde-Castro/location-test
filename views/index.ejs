@@ -1,11 +1,11 @@
     <% layout('layouts/boilerplate') -%>
     <section id="search" class="search-wrap">
             <div class="fullscreen-video-wrap">
-                          <video src="/video/SVID_20181209_063615_1.mp4" muted oncanplay="this.play()" onloadeddata="this.muted=true" autoplay="ture" loop ></video>
+                          <video src="/video/SVID_20181209_063615_1.mp4" muted oncanplay="this.play()" onloadeddata="this.muted=true" autoplay="ture" loop loop  ></video>
               </div>
               <div class="header-overlay"></div>
           <h1>Find A Room, That best suits YOU</h1>
-          <form action="/posts" class="search-form" method="GET">
+          <form action="/posts" class="search-form" method="GET"  autocomplete="off">
             <i class="fas fa-search"></i>
             <input type="search" name="search" placeholder="Block G, L, H, etc..."  >
             <input type="submit" value="Search">

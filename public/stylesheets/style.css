@@ -31,10 +31,12 @@ ul {
 a {
   color: rgb(54, 52, 52);
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 
@@ -44,6 +46,13 @@ a:hover {
   padding: 1rem 4rem;
   margin: auto;
   overflow: hidden;
+}
+
+.rooms{
+  border: 1px solid #16a11d;
+  color: #16a11d;
+  margin-right: 0.5rem;
+  padding: 0.6rem;
 }
 
 .error {
@@ -112,44 +121,11 @@ header ul {
 }
 
 
-.fa-user:before {
-  font-family: fontawesome;
-  content: " ";
-}
-
-.fa-user:after {
-  font-family: fontawesome;
-  content: "\f007";
-}
 
 
-.fa-users:before {
-  font-family: fontawesome;
-  content: " ";
-}
 
-.fa-users:after {
-  font-family: fontawesome;
-  content: "\f0c0";
-}
 
-.fa-lock::after{
-  font-family: fontawesome;
-  content:"\f023"
-}
-.fa-lock:before{
-  font-family: fontawesome;
-  content:""
-}
 
-.fa-envelope-o::after{
-  font-family: fontawesome;
-  content:"\f003"
-}
-.fa-envelope-o:before{
-  font-family: fontawesome;
-  content:""
-}
 
 .fa-heart:before {
   font-family: fontawesome;
@@ -165,63 +141,11 @@ header ul {
   font-family: fontawesome;
   content:"\f004"
 }
-.fa-taxi:after{
-  font-family: fontawesome;
-  content:"\f1ba"
-}
-
-.fa-taxi:before{
-  font-family: fontawesome;
-  content:""
-}
-
-.fa-wifi::after{
-  font-family: fontawesome;
-  content:"\f1eb"
-}
-.fa-wifi:before{
-  font-family: fontawesome;
-  content:""
-}
-
-.fa-chevron-right::after{
-  font-family: fontawesome;
-  content:"\f053"
-}
-.fa-chevron-right:before{content:"";font-family: fontawesome;}
-
-.fa-chevron-left::after{
-  font-family: fontawesome;
-  content:"\f054"
-}
-.fa-chevron-left:before{content:""; font-family: fontawesome;}
 
 
-.fa-chevron-up:after{
-  font-family: fontawesome;
-  content:"\f077"
-}
-.fa-chevron-up:before{
-  font-family: fontawesome;
-  content:" ";
-}
-.fa-chevron-down:active{
-  font-family: fontawesome;
-  content:"\f078"
-}
-.fa-chevron-down:before{
-  font-family: fontawesome;
- 
-}
 
-.fa-university::after{
-  font-family: fontawesome;
-  content:"\f19c"
-}
-.fa-university::before{
-  font-family: fontawesome;
-  content:" "
-}
+
+
 
 .fa-star::after{
   font-family: fontawesome;
@@ -254,24 +178,8 @@ header ul {
   content:" "
 }
 
-.fa-edit:before{
-  font-family: fontawesome;
-  content:" "
-}
 
-.fa-edit:after{
-  font-family: fontawesome;
-  content:" "
-}
 
-.fa-download::after{
-  font-family: fontawesome;
-  content:"\f019"
-}
-.fa-download:before{
-  font-family: fontawesome;
-  content:""
-}
 
 
 
@@ -1167,8 +1075,8 @@ background: white;
 .search-btn{
   color: #e84118;
   float: right;
-  width: 30px;
-  height: 30px;
+  width: 31px;
+  height: 29px;
   border-radius: 50%;
   background: #2f3640;
   display: flex;
