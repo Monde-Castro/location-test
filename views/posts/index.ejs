@@ -15,10 +15,27 @@
     <div class="gig" data-aos="fade-left">
         <div class="view-contnet">
             <div class="content">
-                
-              <% post.images.forEach(function(image) { %>
-                <img src="<%= image.url %>" alt="image" width="200px">
-                <% }); %>
+
+                <div class="slider-frame">
+                  <div class="slide-images">
+                    <div class="img-container">
+                      <% post.images.forEach(function(image) { %>
+                        <img src="<%= image.url %>" alt="image" width="200px">
+                        <% }); %>
+                    </div>
+                    <div class="img-container">
+                        <% post.images.forEach(function(image) { %>
+                          <img src="<%= image.url %>" alt="image" width="200px">
+                          <% }); %>
+                      </div>
+                      <div class="img-container">
+                          <% post.images.forEach(function(image) { %>
+                            <img src="<%= image.url %>" alt="image" width="200px">
+                            <% }); %>
+                        </div>
+                  </div>
+                </div>
+             
                                     
             </div>
               <div class="content-information">
@@ -31,8 +48,8 @@
                 </div>   
                   
                 </div>
-                
-                <p><h3>Description:</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem at ratione itaque, magnam reiciendis nihil commodi temporibus dolorum sapiente exercitationem animi quis provident, aperiam explicabo perspiciatis voluptatem culpa ipsam nostrum officia nesciunt nisi qui iure quasi sit? Laboriosam deserunt, eveniet nam tempora nobis neque ea, quo quod sed, nesciunt numquam.</p>
+                <h3><p>Description:</p></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem at ratione itaque, magnam reiciendis nihil commodi temporibus dolorum sapiente exercitationem animi quis provident, aperiam explicabo perspiciatis voluptatem culpa ipsam nostrum officia nesciunt nisi qui iure quasi sit? Laboriosam deserunt, eveniet nam tempora nobis neque ea, quo quod sed, nesciunt numquam.</p>
                 </div>
         </div>
        

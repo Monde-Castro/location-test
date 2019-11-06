@@ -594,9 +594,9 @@ input[type=email]{
     width: 100px;
     min-width: 700px;
     padding: 10px;
-    
-   
   }
+
+
 }
 
 /* Smartphones */
@@ -662,6 +662,11 @@ input[type=email]{
     
    
   }
+
+
+
+
+
 }
 
 @media(max-width:  576px ){
@@ -694,22 +699,7 @@ input[type=email]{
     display: none
   }
 }
-@media screen and (min-width: 2560px){
-  .side-nav{
-    display: none
-  }
-  .hamburger{
-    display: none
-  }
-}
-@media screen and (min-width: 1366px){
-  .side-nav{
-    display: none
-  }
-  .hamburger{
-    display: none
-  }
-}
+
 
 
 
@@ -1194,3 +1184,51 @@ input[type="checkbox"]:checked + span::before{
   filter: grayscale(100%);
   transform: scale(1.1);
 }
+
+.slider-frame{
+  overflow: hidden;
+  height: 240px;
+  width: 300px;
+  margin-top: 9px;  
+  padding-top: 25px;
+  border-radius: 40px;
+}
+
+/* ----------- SLIDE ANIMATION -------------- */
+
+@-webkit-keyframes slide_animation{
+    0% { left:0px;}
+    10%{ left:0px;}
+    20%{ left:1200px;}
+    30%{ left:1200px;}
+    40%{ left:2400px;}
+    50%{ left:2400px;}
+    60%{ left:1200px;}
+    70%{ left:1200px;}
+    80%{ left:0px;}
+    90%{ left:0px;}
+    100%{ left:0px;}
+}
+
+.slide-images{
+  width: 3600px;
+  height: 800px;
+  margin: 0 0 0 -2400px;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 22s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+
+.img-container{
+  height: 8000px;
+  width: 1200px;
+  position: relative;
+  float: left;
+}
+
+
+
+/* ----------- SLIDE ANIMATION -------------- */
