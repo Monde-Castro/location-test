@@ -1232,3 +1232,144 @@ input[type="checkbox"]:checked + span::before{
 
 
 /* ----------- SLIDE ANIMATION -------------- */
+
+@media screen and (max-width: 467px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+
+  .price-box{
+    display: grid;
+    flex-direction: column;
+  }
+
+  
+
+  header {
+    flex-direction: column;
+    padding: 0.3rem !important;
+  }
+
+  nav{
+    position: relative;
+}
+  
+
+  .search-form {
+    width: 90%;
+  }
+
+  input[type='search'] {
+    flex-basis: 100%;
+  }
+
+  .search-wrap h1 {
+    font-size: 2rem;
+  }
+
+  .search-wrap {
+    padding: 2.3rem;
+  }
+
+  .gig  {
+    flex-direction: row;
+  }
+
+  .card-img{
+    width: 100%;
+  }
+  .gig .btn {
+    display: block;
+    text-align: center;
+  }
+
+  .form-wrap.reg-form, video,
+  .form-wrap.login-form {
+    width: 80%;
+  }
+  video{
+    display: none;
+  }
+  .reviewbox{
+    width: 100px;
+    min-width: 700px;
+    padding: 10px;
+  }
+
+
+}
+
+@media screen and (max-width: 598px ) {
+  body{
+    font-size: larger;
+  }
+  .container {
+    padding: 1em;
+  }
+  .price-box{
+    display: grid;
+    flex-direction: column;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav{
+    position: relative;
+}
+
+  .gig{
+    display: flex;
+    flex-direction: column;
+  }
+  .card-img{
+    width: 100%;
+  }
+
+   ul{
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+     
+  }
+
+  input[type='search'] {
+    flex-basis: 0;
+  }
+
+  .search-form i {
+    display: none;
+  }
+
+  .form-wrap, .fullscreen-video-wrap {
+    padding: 1rem 2rem 2rem;
+  }
+
+  .form-wrap.reg-form,
+  .form-wrap.login-form {
+    width: 100%;
+  }
+  video{
+    display: none;
+   }
+   .reviewbox{
+    width: 100px;
+    min-width: 700px;
+    padding: 10px;
+    
+   
+  }
+
+
+  .slider-frame {
+    overflow: hidden;
+    height: 240px;
+    width: 390px;
+    margin-top: 9px;
+    padding: 0px;
+    border-radius: 20px;
+  }
+
+}
