@@ -1368,7 +1368,7 @@ input[type="checkbox"]:checked + span::before{
     height: 240px;
     width: 390px;
     margin-top: 9px;
-    padding: 0px;
+      padding: 0px;
     border-radius: 20px;
   }
 
