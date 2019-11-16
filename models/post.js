@@ -8,7 +8,7 @@ const PostSchema = new Schema({
 	PhoneNo: String,
 	price: String,
 	description: String,
-	images: [ {url: String, public_id: String}],
+	images: [{url: String, public_id: String}],
 	location: String,
 	author: {
 		type: Schema.Types.ObjectId,

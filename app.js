@@ -20,14 +20,13 @@ const reviewsRouter = require('./routes/reviews');
 
 const app = express();
 // connect to the database
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://locationAdmin:8Opfb4xex48k8kkn@locationdb-ajkui.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("LocationDB");
-  // perform actions on the collection object
-  client.close();
+mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost:27017/Location', { 
+
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
 });
+
 
 
 const db = mongoose.connection;
