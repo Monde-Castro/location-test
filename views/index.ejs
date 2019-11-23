@@ -1,14 +1,119 @@
-    <% layout('layouts/boilerplate') -%>
-    <section id="search" class="search-wrap">
-            <div class="fullscreen-video-wrap">
-                          <video src="/video/SVID_20181209_063615_1.mp4" muted oncanplay="this.play()" onloadeddata="this.muted=true" autoplay="ture" loop loop  ></video>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title><%= title  %></title>
+            <link type="text/css" href="css/materialize.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+            <!--Import materialize.css-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        </head>
+        <body class="grey lighten-4">
+        
+            <!-- to nav -->
+                <nav class=" navbar-fixed z-depth-2 ">
+                    <div class="nav-wrapper">
+                      <a href="index.html" class=" center brand-logo">
+                            <i class=" fas fa-map-marker-alt  "></i><span class="Log-text">Location</span>
+                          </a>
+                      <a href="#" data-target="mobile-nav" class="right sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                      </a>
+                      <ul class="right hide-on-med-and-down">
+                            <% if(!currentUser) {  %>
+                                <li><a href="#">Login</a></li>
+                                    <% } else { %>
+                                        <li>
+                                            <a  class="dropdown-trigger" data-target="dropdownMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
+                                        </li>
+                                <% }  %>
+                                <li><a href="#">Accommodation</a></li>
+                      </ul>
+                    </div>
+                </nav>
+              
+        
+             <!-- Dropdown Menu -->
+            <ul id="dropdownMenu" class="dropdown-content" style="/* width: 110.344px; */ top: 60px !important; " >
+                <li><a href="#!">Profile</a></li>
+                <li><a href="#!">Sign up</a></li>
+                <li><a href="#!">Accommodation</a></li>
+            </ul>
+        
+        
+             <!-- side nav -->
+             <ul class="sidenav" id="mobile-nav">
+                <li><a class="subheader">LOCATION</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li>
+                        <a  class="dropdown-trigger" data-target="dropdownSideMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
+                            <!-- Dropdown Menu -->
+                            <ul id="dropdownSideMenu" class="dropdown-content" style="/* width: 110.344px; */top: 60px; " >
+                                <li><a href="#!">Profile</a></li>
+                                <li><a href="#!">Sign up</a></li>
+                                <li><a href="#!">Accommodation</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li><a href="#">Accommodation</a></li>
+              </ul>
+        
+              <header class="v-header container">
+                  <div class="fullscreen-video-wrap responsive">
+                    <video class="responsive" src="video/SVID_20181209_063615_1.mp4" muted oncanplay="this.play()" onloadeddata="this.muted=true" ></video>
+                  </div>
+                  <div class="header-overlay"></div>
+                  <div class="content container ">
+                    <img class="logo pulse" src="img/landmark.png"  width="150" >
+                    <h1>Find A Room, That best suits YOU</h1>
+                        
+                      <div class="row ">
+                          <form action="/posts" class="search-form" method="GET"  autocomplete="off" >
+                                <div class="search--filter row">
+                                    <div class="input-field search__field">
+                                        <input type="text" id="icon_prefix" class="validate"  value="<%= query.search %>">
+                                        <label class="postion__content" for="icon_prefix"><i class="fas fa-search"></i>e.g Soshanguve Block G</label>
+                                    </div>
+                                    <div class="input-field pricing__input">
+                                        <select  >
+                                            <option value="1">Adult 1</option>
+                                            <option value="1">Adult 2</option>
+                                            <option value="1">Adult 3</option> 
+                                            <option value="1">Adult 4</option>
+                                        </select>
+                                         <label for="">Pricing</label>
+                                    </div>
+                                    <div class="input-field rating__input">
+                                        <select >
+                                            <option name="avgRating[]" value="1" <%= query.avgRating && query.avgRating.includes('1') ? 'checked' : '' %>>1Star</option>
+                                            <option name="avgRating[]" value="2" <%= query.avgRating && query.avgRating.includes('2') ? 'checked' : '' %>>2 Stars</option>
+                                            <option name="avgRating[]" value="3" <%= query.avgRating && query.avgRating.includes('3') ? 'checked' : '' %>>3 Stars</option>
+                                            <option name="avgRating[]" value="4" <%= query.avgRating && query.avgRating.includes('4') ? 'checked' : '' %>>4 Stars</option>
+                                            <option name="avgRating[]" value="5" <%= query.avgRating && query.avgRating.includes('5') ? 'checked' : '' %>>5 Stars</option>
+                                        </select>
+                                        <label for="">Rating</label>
+                                    </div>
+                                    <div class="input-field search__btn">
+                                        <button class="btn blue lighten-1"><input type="submit" class="white-text" value="Search"></button> 
+                                    </div>
+                                </div>
+            
+            
+                          </form>
+                      </div> 
+                
               </div>
-              <div class="header-overlay"></div>
-          <h1>Find A Room, That best suits YOU</h1>
-          <form action="/posts" class="search-form" method="GET"  autocomplete="off">
-            <i class="fas fa-search"></i>
-            <input type="search" name="search" placeholder="Block G, L, H, etc..."  >
-            <input type="submit" value="Search">
-          </form>
-        </section> 
-    
+                </header>
+        
+        
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="js/materialize.min.js"></script>
+            <script src="js/ui.js"></script>
+        </body>
+        </html>
