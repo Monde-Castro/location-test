@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title  %></title>
-    <link type="text/css" href=".../css/materialize.min.css" rel="stylesheet">
+    <link type="text/css" href="/stylesheets/materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href=".../css/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
@@ -19,7 +19,7 @@
     <!-- to nav -->
 		    <nav class=" navbar-fixed z-depth-2 ">
 		        <div class="nav-wrapper">
-		          <a href="index.html" class=" center brand-logo">
+		          <a href="/" class=" center brand-logo">
                     <i class=" fas fa-map-marker-alt  "></i><span class="Log-text">Location</span>
                   </a>
 		          <a href="#" data-target="mobile-nav" class="right sidenav-trigger">
@@ -27,13 +27,14 @@
 		          </a>
 		          <ul class="right hide-on-med-and-down">
                         <% if(!currentUser) {  %>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="/login">Login</a></li>
                                 <% } else { %>
                                     <li>
                                         <a  class="dropdown-trigger" data-target="dropdownMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
                                     </li>
-                            <% }  %>
-                        <li><a href="#">Accommodation</a></li>
+                                    <li><a href="/logout">Sign Out</a></li>
+                                    <% }  %>
+                                    <li><a href="/posts">Accommodation</a></li>
 		          </ul>
 		        </div>
 		    </nav>
@@ -41,27 +42,27 @@
 
      <!-- Dropdown Menu -->
     <ul id="dropdownMenu" class="dropdown-content" style="/* width: 110.344px; */ top: 60px !important; " >
-        <li><a href="#!">Profile</a></li>
-        <li><a href="#!">Sign up</a></li>
-        <li><a href="#!">Accommodation</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/register">Sign up</a></li>
+        <li><a href="/posts">Accommodation</a></li>
     </ul>
 
 
      <!-- side nav -->
      <ul class="sidenav" id="mobile-nav">
 		    <li><a class="subheader">LOCATION</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="/login">Login</a></li>
             <li>
                 <a  class="dropdown-trigger" data-target="dropdownSideMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
                     <!-- Dropdown Menu -->
                     <ul id="dropdownSideMenu" class="dropdown-content" style="/* width: 110.344px; */top: 60px; " >
-                        <li><a href="#!">Profile</a></li>
-                        <li><a href="#!">Sign up</a></li>
-                        <li><a href="#!">Accommodation</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/register">Sign up</a></li>
+                        <li><a href="/posts">Accommodation</a></li>
                     </ul>
                 </a>
             </li>
-            <li><a href="#">Accommodation</a></li>
+            <li><a href="/posts">Accommodation</a></li>
 		  </ul>
           
           <section id="add" class="container" style="margin-top: 50px;">
@@ -115,7 +116,7 @@
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src=".../js/materialize.min.js"></script>
-    <script src=".../js/ui.js"></script>
+    <script src="/javascripts/materialize.min.js"></script>
+    <script src="/javascripts/ui.js"></script>
 </body>
 </html>
