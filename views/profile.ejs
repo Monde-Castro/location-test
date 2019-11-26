@@ -62,11 +62,14 @@
             </li>
             <li><a href="#">Accommodation</a></li>
 		  </ul>
-
+          
           <section id="add" class="container" style="margin-top: 50px; margin-bottom: 50px;">
                 <div class="form-wrap container">
-                    <img src="<%= currentUser.image.secure_url %>" class="respondsive-img circle center" alt="<%= currentUser.username %>'s profile image" >
-                    <br>
+                    <div class="center">
+
+                        <img src="<%= currentUser.image.secure_url %>" class="respondsive-img circle " alt="<%= currentUser.username %>'s profile image" >
+                    </div>
+                    
                         <h5>
                             <div class="center"><%= currentUser.username %>'s Profile</div>
                         </h5>

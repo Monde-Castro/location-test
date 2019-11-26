@@ -1,49 +1,47 @@
-            <% layout('boilerplate') -%>
-              <header class="v-header container">
-                  <div class="fullscreen-video-wrap responsive">
-                    <video class="responsive" src="/video/SVID_20181209_063615_1.mp4" muted oncanplay="this.play()" onloadeddata="this.muted=true" ></video>
-                  </div>
-                  <div class="header-overlay"></div>
-                  <div class="content container ">
-                    <img class="logo pulse" src="/images/landmark.png"  width="150" >
-                    <h1>Find A Room, That best suits YOU</h1>
-                        
-                      <div class="row ">
-                          <form action="/posts" class="search-form" method="GET"  autocomplete="off" >
-                                <div class="search--filter row">
-                                    <div class="input-field search__field">
-                                        <input type="text" id="icon_prefix" class="validate"  value="<%= query.search %>">
-                                        <label class="postion__content" for="icon_prefix"><i class="fas fa-search"></i>e.g Soshanguve Block G</label>
-                                    </div>
-                                    <div class="input-field pricing__input">
-                                        <select  >
-                                            <option value="1">Adult 1</option>
-                                            <option value="1">Adult 2</option>
-                                            <option value="1">Adult 3</option> 
-                                    
-                                            <option value="1">Adult 4</option>
-                                        </select>
-                                         <label for="">Pricing</label>
-                                    </div>
-                                    <div class="input-field rating__input">
-                                        <select >
-                                            <option name="avgRating[]" value="1" <%= query.avgRating && query.avgRating.includes('1') ? 'checked' : '' %>>1Star</option>
-                                            <option name="avgRating[]" value="2" <%= query.avgRating && query.avgRating.includes('2') ? 'checked' : '' %>>2 Stars</option>
-                                            <option name="avgRating[]" value="3" <%= query.avgRating && query.avgRating.includes('3') ? 'checked' : '' %>>3 Stars</option>
-                                            <option name="avgRating[]" value="4" <%= query.avgRating && query.avgRating.includes('4') ? 'checked' : '' %>>4 Stars</option>
-                                            <option name="avgRating[]" value="5" <%= query.avgRating && query.avgRating.includes('5') ? 'checked' : '' %>>5 Stars</option>
-                                        </select>
-                                        <label for="">Rating</label>
-                                    </div>
-                                    <div class="input-field search__btn">
-                                        <button class="btn blue lighten-1"><input type="submit" class="white-text" value="Search"></button> 
-                                    </div>
+ <% layout('layouts/boilerplate') -%>
+                          <header class="v-header container">
+                                <div class="fullscreen-video-wrap responsive">
+                                    <video class="responsive" src="video/SVID_20181209_063615_1.mp4" muted oncanplay="this.play()" onloadeddata="this.muted=true" ></video>
                                 </div>
+                                <div class="header-overlay"></div>
+                                <div class="content container ">
+                                        <img class="logo pulse" src="/images/landmark.png"  width="150" >
+                                        <h4>Find A Room, That best suits YOU</h4>
+                                       <div class="row">
+                                           <form action="/posts" class="search-form" method="GET"  autocomplete="off">
+                                            <div class="search--filter row">
+                                                <div class="input-field search__field">
+                                                    <label class="postion__content" for="icon_prefix"><i class="fas fa-search"></i>e.g Soshanguve Block G</label>
+                                                     <input type="text" id="icon_prefix" class="validate" name="search" value="<%= query.search %>">
+                                                </div>
+                                                <div class="input-field pricing__input">
+                                                    <select  >
+                                                        <option value="1">Adult 1</option>
+                                                        <option value="1">Adult 2</option>
+                                                        <option value="1">Adult 3</option> 
+                                                    
+                                                        <option value="1">Adult 4</option>
+                                                    </select>
+                                                    <label for="">Pricing</label>
+                                                </div>
+                                                <div class="input-field rating__input">
+                                                        <select >
+                                                                <option name="avgRating[]" value="1" <%= query.avgRating && query.avgRating.includes('1') ? 'checked' : '' %>>1Star</option>
+                                                                <option name="avgRating[]" value="2" <%= query.avgRating && query.avgRating.includes('2') ? 'checked' : '' %>>2 Stars</option>
+                                                                <option name="avgRating[]" value="3" <%= query.avgRating && query.avgRating.includes('3') ? 'checked' : '' %>>3 Stars</option>
+                                                                <option name="avgRating[]" value="4" <%= query.avgRating && query.avgRating.includes('4') ? 'checked' : '' %>>4 Stars</option>
+                                                                <option name="avgRating[]" value="5" <%= query.avgRating && query.avgRating.includes('5') ? 'checked' : '' %>>5 Stars</option>
+                                                            </select>
+                                                            <label for="">Rating</label>
+                                                </div>
+                                                <div class="input-field search__btn">
+                                                   <input type="submit" class=" btn blue lighten-1" value="Search"> 
+                                                </div>
+                                            </div>  
+                                          </form>
+                                       </div>
+                                    
+                                  </div>
+                          </header>
+              
             
-            
-                          </form>
-                      </div> 
-                
-              </div>
-                </header>
-        

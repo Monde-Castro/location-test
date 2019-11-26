@@ -47,8 +47,10 @@ module.exports = {
 			populate:{
 				path: 'author',
 				model: 'User'
-			}
+			},
+
 		});
+		
 		const floorRating = post.calculateAvgRating();
 		res.render('posts/show', {post, floorRating});
 	},

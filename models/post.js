@@ -8,6 +8,7 @@ const PostSchema = new Schema({
 	PhoneNo: String,
 	price: String,
 	description: String,
+	shortdescription: String,
 	images: [{url: String, public_id: String}],
 	location: String,
 	author: {

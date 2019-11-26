@@ -22,10 +22,11 @@ const {
   isLoggedIn,
   isValidPassword,
   changePassword,
+  searchAndFilterPosts,
  } = require('../middleware/index');
 
 /* GET home page. */
-router.get('/', asyncErrorHandler(landingPage));
+router.get('/',asyncErrorHandler(searchAndFilterPosts), asyncErrorHandler(landingPage));
 
 /* GET /register */
 router.get('/register', getRegister);

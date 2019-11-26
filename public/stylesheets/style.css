@@ -45,7 +45,7 @@
 
    .dropdown-content{
         width: 280px !important; 
-       top: 60px !important;
+       top: 48px !important;
    }
 
    .Log-text{
@@ -256,42 +256,36 @@
    }
 
    textarea {
-    width: 100%;
-    height: 3rem;
+    margin: 0px !important;
+    height: 180px !important;
+    width: 662px !important;
     background-color: var(--bg-color) !important;
     border: 1px solid var(--bg-color) !important;
    }
 
-   .fa-star::after{
-  font-family: fontawesome;
-  content:"\f005 " 
-}
+   .edit-review-form{
+       display: none;
+   }
 
-.fa-star::before{
-  font-family: fontawesome;
-  content:" " 
-}
+   
 
-.fa-star-half-o::after{
-  font-family: fontawesome;
-  content:"\f006"
-}
-
-.fa-star-half-o::before{
+  .fa-star::before{
   font-family: fontawesome;
   content:" " 
+  }
 
-}
-
-.fa-star-half-empty::after{
+  
+  .fa-star-half-o::before{
   font-family: fontawesome;
-  content:"\f123 "
-}
+  content:" " 
+  }
 
-.fa-star-half-empty::before{
+  
+
+  .fa-star-half-empty::before{
   font-family: fontawesome;
   content:" "
-}
+  }
 
 
 /* Tablet */

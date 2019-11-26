@@ -78,25 +78,26 @@
                 <div class="input-group">
                         <input type="text" name="post[PhoneNo]" step=".01"  class="input-box review--comment"  placeholder="PhoneNo">
                 </div>
+                <div class=" file-field">
+                            <div class="btn blue lighten-1">
+                                    <span>Image</span>
+                                    <input type="file" multiple accept="images/*" id="image" name="images" >
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input type="text" class="file-path validate review--comment" accept="images/*" placeholder="Choose files: must be 4">
+                                </div>
+                    </div> 
+                                   
                 <div class="input-group">
-                        <div class=" dropfileForm " >
-                                <div>
-                                    <label for="image" class="fileLabel">
-                                    <br>
-                                    <input type="file" class="fileInput" accept="images/*" id="image" name="images" multiple >
-                                        <br>
-                                       <span class="fileInfro"> Choose files: must be 4</span>
-                                    </label>
-                            </div>
-                    </div>                
-                    
+                    <input type="text" name="post[shortdescription]" class="input-box review--comment" placeholder="Shortdescription">
+                </div>
                 <div class="input-group">
-                    <textarea  name="post[description]" placeholder="Description"  class="input-box" rows="10"></textarea>
+                    <textarea  name="post[description]" placeholder="Description"  class="input-box" rows="50"></textarea>
                 </div>
                 <div class="input-group">
                         <input type="text" name="post[location]" class="input-box review--comment" placeholder="Location">
                 </div>
-                <input type="submit" value="Submit" class="btn blue lighten-1">
+                <input type="submit" value="Submit" class="btn green ">
               </form>
             </div>
           </section>

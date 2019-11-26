@@ -1,4 +1,4 @@
-
+<% layout('layouts/posts-show-layout.ejs') -%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +7,10 @@
     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title  %></title>
-    <link type="text/css" href="/stylesheets/materialize.min.css" rel="stylesheet">
+    <link type="text/css" href=".../css/materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href=".../css/style.css">
+    <link rel="stylesheet" href=".../stylesheets/lightbox.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
@@ -27,7 +28,7 @@
 		          </a>
 		          <ul class="right hide-on-med-and-down">
                         <% if(!currentUser) {  %>
-                            <li><a href="/login">Login</a></li>
+                            <li><a href="/">Login</a></li>
                                 <% } else { %>
                                     <li>
                                         <a  class="dropdown-trigger" data-target="dropdownMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
@@ -50,7 +51,7 @@
      <!-- side nav -->
      <ul class="sidenav" id="mobile-nav">
 		    <li><a class="subheader">LOCATION</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/">Login</a></li>
             <li>
                 <a  class="dropdown-trigger" data-target="dropdownSideMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
                     <!-- Dropdown Menu -->
@@ -61,36 +62,27 @@
                     </ul>
                 </a>
             </li>
-            <li><a href="#">Accommodation</a></li>
+            <li><a href="/posts">Accommodation</a></li>
           </ul>
           
-          <div class="form-wrap container"  style="margin-bottom: 50px; margin-top: 50px;">
-                <form action="/login" method="POST" autocomplete="off" enctype="multipart/form-data" class="container" >
-                    <h4>Login</h4>
-                  <div class="input-group">
-                      <lable for="username"><i class="fa fa-user fa-lg fa-fw" aria-hidden="true" style="padding: 5px;"></i>Username:</lable>
-                      <input type="text" class="input-box  review--comment" id="username"  name="username" placeholder="username" required>
-                      
-                  </div>
-                  <div class="input-group">
-                      <lable for="password"><i class="fa fa-lock fa-lg fa-fw" aria-hidden="true" style="padding: 5px;"></i>Password:</lable>
-                      <input type="password" class="input-box  review--comment"  id="password" id="password" name="password" placeholder="password" required >
-                      
-                  </div>
-                  
-                  <input type="submit" value="Submit" class="btn blue lighten-1">
-                  <p><a href="/forgot-password">Forgot password?</a></p>
-                  <p><a href="/register" style="padding-right: 5px;">Don't have an account?</a>Sign up</p>
-                </form>
-              </div>
-            </section>
-     
-        
-        
-
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="/javascripts/materialize.min.js"></script>
-    <script src="/javascripts/ui.js"></script>
+          <%- body -%>
+          
+          <footer class="footer">
+                <div class="container" style="padding: 20px;">
+                    <div>
+                        <div class=" center-align">&copy; 2019 <i class="fas fa-map-marker-alt"></i>Location</div>
+                      </div>
+                      <hr>
+                      <div class="center-align">
+                          Made with<i class="fa-heart"></i> in Soshanguve
+                      </div>
+                </div>
+                 
+                </footer>
+    
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/javascripts/materialize.min.js"></script>
+<script src="/javascripts/ui.js"></script>
+<script src="/javascripts/post-show.js"></script>
 </body>
-</html>
+</html> 

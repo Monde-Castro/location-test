@@ -4,6 +4,7 @@ const createError = require('http-errors');
 const express = require('express');
 const engine = require('ejs-mate');
 const path = require('path');
+//const favicon = require('serve-favicon');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const passport = require('passport');
@@ -41,6 +42,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -65,6 +67,10 @@ passport.deserializeUser(User.deserializeUser());
 
 // set local variable middleware
 app.use(function(req, res, next){
+  req.user = {
+    'id': '5ddc03adb3a17e1aac9d8f26',
+    'username':  'brad'
+  }
   res.locals.currentUser = req.user;
   // set default page title
   res.locals.title = 'Location'
@@ -92,16 +98,15 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   //res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'producation' ? err : {};
+  res.locals.error = req.app.get('env') === 'production' ? err : {};
 
   // render the error page
   //res.status(err.status || 500);
   //res.render('error');
-  //console.log(err)
+  console.log(err)
   req.session.error = err.message;
   res.redirect('back');
 });
 
-
-
+ 
 module.exports = app;
