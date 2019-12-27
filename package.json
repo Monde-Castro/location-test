@@ -19,7 +19,6 @@
     "express-session": "^1.16.2",
     "faker": "^4.1.0",
     "http-errors": "~1.6.3",
-    "lightbox2": "^2.11.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.7.0",
     "mongoose-paginate": "^5.0.3",

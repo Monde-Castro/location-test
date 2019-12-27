@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title  %></title>
     <link type="text/css" href="/stylesheets/materialize.min.css" rel="stylesheet">
@@ -31,6 +31,9 @@
                                 <% } else { %>
                                     <li>
                                         <a  class="dropdown-trigger" data-target="dropdownMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
+                                    </li>
+                                    <li>
+                                            <a  href="/logout"> Sign out </a>
                                     </li>
                             <% }  %>
                         <li><a href="/posts">Accommodation</a></li>
@@ -126,13 +129,15 @@
             <div class="recipes container grey-text text-darken-1 ">
 
                     <div class="card-panel recipe white row">
-                        <img src="/images/Omang.jpg" alt="image" width="200px">
+                        <img src="<%= post.image%>" alt="image" width="200px">
                             <div class="recipe-details">
                                 <div style="display: inline-flex;">
                                     <div class="recipe-title"><%=  post.location %></div>
                                     <div class="recipe-title "  style="padding-left:130px;"><%= post.price %></div>
                                 </div>
-                                <div class="recipe-ingredients truncate "><%= post.shortdescription %> </div>
+                                <div >
+                                   <p class="recipe-ingredients truncate "><%= post.shortdescription %></p>  
+                                </div>
                             </div>
                             <div class="recipe-delete">
                                 <a href="/posts/<%= post.id %>"  class="btn green lighten-1">View</a>

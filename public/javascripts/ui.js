@@ -1,7 +1,11 @@
 $(document).ready(function(){
     $('.dropdown-trigger').dropdown();
+    $('.materialboxed').materialbox();
     $('select').formSelect();
     $('.sidenav').sidenav({edge: 'right'});
+    
+    var toastHTML = [ success ];
+    M.toast({html: toastHTML})
 });
 //Toggle edit review form
 $('.toggle-edit-form').on('click', function(){

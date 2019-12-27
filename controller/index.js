@@ -46,23 +46,23 @@ module.exports = {
 
 	// GET /login
 	getLogin(req, res, next){
-		if(req.isAuthenticated()) return res.redirect('/');
-		if(req.query.returnTo) req.session.redirectTo = req.headers.referer;
-		res.render('login', {tilte: 'Login '})
+		if (req.isAuthenticated()) return res.redirect('/');
+		if (req.query.returnTo) req.session.redirectTo = req.headers.referer;
+		res.render('login', { title: 'Login' });
 	},
 
 	//POST /Login
  	async postLogin(req, res ,next){
 		const { username, password } = req.body;
 		const { user, error } = await User.authenticate()(username, password);
-		if(!user && error) return next(error);
-		req.login(user, function(err){
+		if (!user && error) return next(error);
+		req.login(user, function(err) {
 			if (err) return next(err);
-			req.session.success = `Welcome back ${username}`;
+			req.session.success = `Welcome back, ${username}!`;
 			const redirectUrl = req.session.redirectTo || '/';
-			delete req.session.redirectTo
-			res.redirect(redirectUrl)
-		})
+			delete req.session.redirectTo;
+			res.redirect(redirectUrl);
+		});
 	},
 
 	//GET logout 

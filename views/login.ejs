@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title  %></title>
     <link type="text/css" href="/stylesheets/materialize.min.css" rel="stylesheet">
@@ -29,6 +29,9 @@
                         <% if(!currentUser) {  %>
                             <li><a href="/login">Login</a></li>
                                 <% } else { %>
+                                    <li>
+                                            <a  href="/logout"> Sign out </a>
+                                    </li>
                                     <li>
                                         <a  class="dropdown-trigger" data-target="dropdownMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
                                     </li>
@@ -61,11 +64,12 @@
                     </ul>
                 </a>
             </li>
-            <li><a href="#">Accommodation</a></li>
+            <li><a href="/posts">Accommodation</a></li>
           </ul>
+          <% include partials/flash-messages %>
           
-          <div class="form-wrap container"  style="margin-bottom: 50px; margin-top: 50px;">
-                <form action="/login" method="POST" autocomplete="off" enctype="multipart/form-data" class="container" >
+          <div class="form-wrap container z-depth-2"  style="margin-bottom: 50px; margin-top: 50px; padding: 50px 0 70px  50px;">
+                <form action="/login" method="POST" autocomplete="off" class="container" >
                     <h4>Login</h4>
                   <div class="input-group">
                       <lable for="username"><i class="fa fa-user fa-lg fa-fw" aria-hidden="true" style="padding: 5px;"></i>Username:</lable>
@@ -83,7 +87,7 @@
                   <p><a href="/register" style="padding-right: 5px;">Don't have an account?</a>Sign up</p>
                 </form>
               </div>
-            </section>
+           
      
         
         

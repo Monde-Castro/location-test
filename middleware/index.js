@@ -16,7 +16,7 @@ const middleware ={
         isReviewAuthor: async (req, res, next) => {
             let review = await Review.findById(req.params.review_id);
             if(review.author.equals(req.user._id)){
-                return next()
+                return next();
             }
             req.session.error = 'Bye Bye';
             return res.redirect('/');

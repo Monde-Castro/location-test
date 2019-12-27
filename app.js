@@ -67,10 +67,10 @@ passport.deserializeUser(User.deserializeUser());
 
 // set local variable middleware
 app.use(function(req, res, next){
-  req.user = {
-    'id': '5ddc03adb3a17e1aac9d8f26',
-    'username':  'brad'
-  }
+  //req.user = {
+  //  'id': '5ddc03adb3a17e1aac9d8f26',
+  //  'username':  'brad'
+  //}
   res.locals.currentUser = req.user;
   // set default page title
   res.locals.title = 'Location'

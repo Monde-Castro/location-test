@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title  %></title>
@@ -31,6 +31,9 @@
                                 <% } else { %>
                                     <li>
                                         <a  class="dropdown-trigger" data-target="dropdownMenu"> Menu<i class="material-icons right">arrow_drop_down</i> </a>
+                                    </li>
+                                    <li>
+                                            <a  href="/logout"> Sign out </a>
                                     </li>
                             <% }  %>
                         <li><a href="/posts">Accommodation</a></li>
